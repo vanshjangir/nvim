@@ -52,7 +52,7 @@ map("n", "<leader>tv", "<CMD>ToggleTerm size=80 direction=vertical<CR>")
 --Switching Modes
 map("i", "<A-n>", "<ESC>n")
 map("i", "<A-u>", "<ESC><CMD>ToggleTerm size=10 direction=horizontal<CR>")
-map("i", "<A-i>", "<ESC><CMD>w<CR><CMD>ToggleTerm size=10 direction=horizontal<CR>")
+map("i", "<A-i>", "<ESC><CMD>w<CR><CMD>ToggleTerm size=10 direction=horizontal<CR>i")
 map("t", "<A-n>", "<C-\\><C-n>")
 map("t", "<A-i>", "<C-\\><C-n><CMD>ToggleTerm size=10 direction=horizontal<CR>i")
 
