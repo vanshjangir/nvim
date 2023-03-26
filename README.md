@@ -15,8 +15,8 @@ This is a simple configuraton for neovim in Windows(native not WSL) includes aut
 
 ### Configuraton
 
-Make a folder named nvim in `C:/Users/This Pc/AppData/Local`
-Clone this repo in that folder or simply write 'git clone "https://github.com/vanshjangir/my-neovim-config"' in powershell after cd..ing into that folder
+Make a folder named nvim in **C:/Users/This Pc/AppData/Local**
+Clone this repo in that folder or simply write 'git clone https://github.com/vanshjangir/my-neovim-config' in powershell after cd..ing into that folder
 
 ### Installing plugins
 1. Run these two command in your powershell. These are package managers for nvim. 
@@ -33,7 +33,7 @@ git clone https://github.com/wbthomason/packer.nvim "$env:LOCALAPPDATA\nvim-data
 2. Open the init.vim file by writing `nvim init.vim` in the nvim folder
 3. Press ESC if you are not in normal (press it anyway just to make sure) and then type `:PlugInstall`. It will download somefiles let it happen and exit it by writing `:q` then exit nvim by writing `:wq`
 
-4. Reopen the init.vim file in normal mode write `:PackerSync`. It will install somefiles let it happen then exit the window and you are good to go 
+4. Reopen the init.vim file in normal mode write `:PackerSync`. It will install somefiles let it happen then exit the window and you are Good to Go! 
 
 
 ## Troubleshooting
