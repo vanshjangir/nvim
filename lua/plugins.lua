@@ -122,7 +122,12 @@ local plugins = {
 	},
 
 	-- Terminal
-	{ "akinsho/toggleterm.nvim", version = "v1.*", config = true },
+	{
+		"akinsho/toggleterm.nvim",
+		config = function()
+			require("configs.toggleterm")
+		end,
+	},
 
 	-- Git
 	{
