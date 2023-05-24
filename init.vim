@@ -10,6 +10,7 @@ Plug 'prettier/vim-prettier', {
   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html'] }
 Plug 'MunifTanjim/nui.nvim'
 Plug 'xeluxee/competitest.nvim'
+Plug 'manzeloth/live-server'
 
 call plug#end()
 
@@ -17,11 +18,8 @@ call plug#end()
 let g:NERDTreeDirArrowExpandable="+"
 let g:NERDTreeDirArrowCollapsible="-"
 
-
-nnoremap <C-f> :NERDTreeFocus<CR>
-nnoremap <C-n> :NERDTree<CR>
 nnoremap <A-g> :NERDTreeToggle<CR>
-inoremap <A-g> :NERDTreeToggle<CR>
+inoremap <A-g> <CMD>:NERDTreeToggle<CR>
  
 
 inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"

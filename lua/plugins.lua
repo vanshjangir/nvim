@@ -27,7 +27,7 @@ return require("packer").startup(function(use)
 		end,
 		requires = { "nvim-web-devicons" },
 	})
-	
+
 	-- Telescope
 	use({
 		"nvim-telescope/telescope.nvim",
@@ -65,7 +65,7 @@ return require("packer").startup(function(use)
 
 	use({ "hrsh7th/cmp-buffer", after = "nvim-cmp" })
 
-    -- LSP diagnostics, code actions, and more via Lua.
+	-- LSP diagnostics, code actions, and more via Lua.
 	use({
 		"jose-elias-alvarez/null-ls.nvim",
 		config = function()
@@ -142,10 +142,21 @@ return require("packer").startup(function(use)
 		end,
 	})
 
-    use { 
-        'xeluxee/competitest.nvim',
-        requires = 'MunifTanjim/nui.nvim',
-        config = function() require'competitest'.setup()end
-    }
-	
+	-- testcases
+	use({
+		"xeluxee/competitest.nvim",
+		requires = "MunifTanjim/nui.nvim",
+		config = function()
+			require("competitest").setup()
+		end,
+	})
+
+	-- treesitter
+	use({
+		"nvim-treesitter/nvim-treesitter",
+		run = function()
+			local ts_update = require("nvim-treesitter.install").update({ with_sync = true })
+			ts_update()
+		end,
+	})
 end)

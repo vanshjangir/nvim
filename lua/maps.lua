@@ -6,7 +6,7 @@ local status, telescope = pcall(require, "telescope.builtin")
 if status then
 	-- Telescope
 	map("n", "<A-F>", telescope.find_files)
-	map("n", "<A-f>", telescope.live_grep)
+	map("n", "<C-f>", telescope.live_grep)
 	map("n", "<leader>fb", telescope.buffers)
 	map("n", "<leader>fh", telescope.help_tags)
 	map("n", "<leader>fs", telescope.git_status)
@@ -27,7 +27,6 @@ map("i", "<C-a>", "<CMD>wq<CR>")
 
 --Quit without saving
 map("n", "<leader>f", "<CMD>q!<CR>")
-map("i", "<C-f>", "<CMD>q!<CR>")
 
 -- Quit
 map("n", "<leader>q", "<CMD>q<CR>")
@@ -44,22 +43,16 @@ map("n", "<A-Right>", "<C-w>l")
 map("n", "<A-Left>", "<C-w>h")
 map("n", "<A-Up>", "<C-w>k")
 map("n", "<A-Down>", "<C-w>j")
-map("n", "<A-l>", "<C-w>l")
-map("n", "<A-h>", "<C-w>h")
-map("n", "<A-k>", "<C-w>k")
-map("n", "<A-j>", "<C-w>j")
+map("n", "<A-L>", "<C-w>l")
+map("n", "<A-H>", "<C-w>h")
+map("n", "<A-K>", "<C-w>k")
+map("n", "<A-J>", "<C-w>j")
 
-
-map("i", "<A-Right>", "<ESC><C-w>li")
-map("i", "<A-Left>", "<ESC><C-w>hi")
-map("i", "<A-Up>", "<ESC><C-w>ki")
-map("i", "<A-Down>", "<ESC><C-w>ji")
-map("i", "<A-l>", "<ESC><C-w>li")
-map("i", "<A-h>", "<ESC><C-w>hi")
-map("i", "<A-k>", "<ESC><C-w>ki")
-map("i", "<A-j>", "<ESC><C-w>ji")
-
-
+-- Fast Navigation
+map("i", "<A-j>", "<Down>")
+map("i", "<A-k>", "<Up>")
+map("i", "<A-h>", "<Left>")
+map("i", "<A-l>", "<Right>")
 
 -- NeoTree
 map("n", "<leader>e", "<CMD>Neotree toggle<CR>")
@@ -75,9 +68,11 @@ map("n", "<leader>tv", "<CMD>ToggleTerm size=80 direction=vertical<CR>")
 
 --Switching Modes
 map("i", "<A-n>", "<ESC>n")
+map("i", "<A-N>", "<ESC>n")
 map("i", "<A-u>", "<ESC><CMD>ToggleTerm size=12 direction=horizontal<CR>")
 map("i", "<A-i>", "<ESC><CMD>w<CR><CMD>ToggleTerm size=12 direction=horizontal<CR>")
 map("t", "<A-n>", "<C-\\><C-n>")
+map("t", "<A-N>", "<C-\\><C-n>")
 map("t", "<A-i>", "<C-\\><C-n><CMD>ToggleTerm size=12 direction=horizontal<CR>i")
 
 map("i", "<A-n>", "<ESC>n")
@@ -86,11 +81,9 @@ map("i", "<A-o>", "<ESC><CMD>w<CR><CMD>ToggleTerm size=70 direction=vertical<CR>
 map("t", "<A-n>", "<C-\\><C-n>")
 map("t", "<A-o>", "<C-\\><C-n><CMD>ToggleTerm size=70 direction=vertical<CR>i")
 
-
 -- Markdown Preview
 map("n", "<leader>m", "<CMD>MarkdownPreview<CR>")
 map("n", "<leader>mn", "<CMD>MarkdownPreviewStop<CR>")
-
 
 -- Competitive Programming
 map("n", "<A-w>", "<CMD>CompetiTestAdd<CR>")
