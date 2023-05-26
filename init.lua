@@ -4,3 +4,8 @@ require("plugins")
 
 vim.cmd("colorscheme nightfox")
 vim.cmd("set clipboard+=unnamedplus")
+vim.cmd("nnoremap <leader>n :NERDTreeFocus<CR>")
+vim.cmd("nnoremap <C-n> :NERDTree<CR>")
+vim.cmd("nnoremap <A-g> :NERDTreeToggle<CR>")
+vim.cmd("inoremap <A-g> :NERDTreeToggle<CR>")
+vim.cmd("nnoremap <C-f> :NERDTreeFind<CR>")

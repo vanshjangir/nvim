@@ -26,6 +26,8 @@ local plugins = {
 
 	-- nui
 	"MunifTanjim/nui.nvim",
+    -- nerdtree
+    "preservim/nerdtree",
 
 	-- Statusline
 	{
