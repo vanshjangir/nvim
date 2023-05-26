@@ -5,7 +5,7 @@ end
 local status, telescope = pcall(require, "telescope.builtin")
 if status then
 	-- Telescope
-	map("n", "<A-F>", telescope.find_files)
+	map("n", "<C-F>", telescope.find_files)
 	map("n", "<C-f>", telescope.live_grep)
 	map("n", "<leader>fb", telescope.buffers)
 	map("n", "<leader>fh", telescope.help_tags)
@@ -21,11 +21,11 @@ end
 map("i", "<C-s>", "<CMD>w<CR>")
 map("n", "<leader>w", "<CMD>w<CR>")
 
---Save and Quit
+-- Save and Quit
 map("n", "<leader>a", "<CMD>wq<CR>")
 map("i", "<C-a>", "<CMD>wq<CR>")
 
---Quit without saving
+-- Quit without saving
 map("n", "<leader>f", "<CMD>q!<CR>")
 
 -- Quit
@@ -39,6 +39,7 @@ map("i", "<C-y>", "<CMD>redo<CR>")
 -- Windows
 map("n", "<leader>v", "<CMD>vsplit<CR><C-w>l")
 map("n", "<leader>h", "<CMD>split<CR><C-w>j")
+
 map("n", "<A-Right>", "<C-w>l")
 map("n", "<A-Left>", "<C-w>h")
 map("n", "<A-Up>", "<C-w>k")
@@ -63,21 +64,17 @@ map("n", "<TAB>", "<CMD>bnext<CR>")
 map("n", "<S-TAB>", "<CMD>bprevious<CR>")
 
 -- Terminal
-map("n", "<leader>th", "<CMD>ToggleTerm size=10 direction=horizontal<CR>")
-map("n", "<leader>tv", "<CMD>ToggleTerm size=80 direction=vertical<CR>")
+map("n", "<leader>th", "<CMD>ToggleTerm size=12 direction=horizontal<CR>")
+map("n", "<leader>tv", "<CMD>ToggleTerm size=70 direction=vertical<CR>")
 
 --Switching Modes
 map("i", "<A-n>", "<ESC>")
 map("i", "<A-u>", "<ESC><CMD>ToggleTerm size=12 direction=horizontal<CR>")
 map("i", "<A-i>", "<ESC><CMD>w<CR><CMD>ToggleTerm size=12 direction=horizontal<CR>")
 map("t", "<A-n>", "<C-\\><C-n>")
-map("t", "<A-N>", "<C-\\><C-n>")
 map("t", "<A-i>", "<C-\\><C-n><CMD>ToggleTerm size=12 direction=horizontal<CR>i")
 
-map("i", "<A-n>", "<ESC>n")
-map("i", "<A-y>", "<ESC><CMD>ToggleTerm size=70 direction=vertical<CR>")
 map("i", "<A-o>", "<ESC><CMD>w<CR><CMD>ToggleTerm size=70 direction=vertical<CR>")
-map("t", "<A-n>", "<C-\\><C-n>")
 map("t", "<A-o>", "<C-\\><C-n><CMD>ToggleTerm size=70 direction=vertical<CR>i")
 
 -- Markdown Preview
