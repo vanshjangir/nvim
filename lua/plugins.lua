@@ -206,6 +206,14 @@ local plugins = {
 		},
 		version = "^1.0.0", -- optional: only update when a new 1.x version is released
 	},
+	{
+		"glepnir/dashboard-nvim",
+		event = "VimEnter",
+		config = function()
+			require("configs.dashboard-nvim")
+		end,
+		dependencies = { { "nvim-tree/nvim-web-devicons" } },
+	},
 }
 
 local opts = {}

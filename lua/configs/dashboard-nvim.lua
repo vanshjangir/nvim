@@ -24,7 +24,7 @@ conf.center = {
 		icon = "  ",
 		desc = "Find  File                              ",
 		action = "Leaderf file --popup",
-		key = "<Leader> f f",
+		key = "<C-F>",
 	},
 	{
 		icon = "  ",
