@@ -26,8 +26,12 @@ local plugins = {
 
 	-- nui
 	"MunifTanjim/nui.nvim",
+
 	-- nerdtree
 	"preservim/nerdtree",
+
+	--live-server
+	"turbio/bracey.vim",
 
 	-- Statusline
 	{

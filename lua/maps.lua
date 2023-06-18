@@ -5,7 +5,7 @@ end
 local status, telescope = pcall(require, "telescope.builtin")
 if status then
 	-- Telescope
-	map("n", "<C-F>", telescope.find_files)
+	map("n", "<leader>ff", telescope.find_files)
 	map("n", "<C-f>", telescope.live_grep)
 	map("n", "<leader>fb", telescope.buffers)
 	map("n", "<leader>fh", telescope.help_tags)
@@ -70,12 +70,12 @@ map("n", "<leader>tv", "<CMD>ToggleTerm size=70 direction=vertical<CR>")
 --Switching Modes
 map("i", "<A-n>", "<ESC>")
 map("i", "<A-u>", "<ESC><CMD>ToggleTerm size=12 direction=horizontal<CR>")
-map("i", "<A-i>", "<ESC><CMD>w<CR><CMD>ToggleTerm size=12 direction=horizontal<CR>")
+map("i", "<A-i>", "<ESC><CMD>ToggleTerm size=12 direction=horizontal<CR>")
 map("t", "<A-n>", "<C-\\><C-n>")
-map("t", "<A-i>", "<C-\\><C-n><CMD>ToggleTerm size=12 direction=horizontal<CR>i")
+map("t", "<A-i>", "<C-\\><C-n><CMD>ToggleTerm size=12 direction=horizontal<CR>")
 
-map("i", "<A-o>", "<ESC><CMD>w<CR><CMD>ToggleTerm size=70 direction=vertical<CR>")
-map("t", "<A-o>", "<C-\\><C-n><CMD>ToggleTerm size=70 direction=vertical<CR>i")
+map("i", "<A-o>", "<ESC><CMD>ToggleTerm size=70 direction=vertical<CR>")
+map("t", "<A-o>", "<C-\\><C-n><CMD>ToggleTerm size=70 direction=vertical<CR>")
 
 -- Markdown Preview
 map("n", "<leader>m", "<CMD>MarkdownPreview<CR>")
@@ -114,6 +114,17 @@ map("n", "<A-7>", "<Cmd>BufferGoto 7<CR>", opts)
 map("n", "<A-8>", "<Cmd>BufferGoto 8<CR>", opts)
 map("n", "<A-9>", "<Cmd>BufferGoto 9<CR>", opts)
 map("n", "<A-0>", "<Cmd>BufferLast<CR>", opts)
+
+map("i", "<A-1>", "<Cmd>BufferGoto 1<CR>", opts)
+map("i", "<A-2>", "<Cmd>BufferGoto 2<CR>", opts)
+map("i", "<A-3>", "<Cmd>BufferGoto 3<CR>", opts)
+map("i", "<A-4>", "<Cmd>BufferGoto 4<CR>", opts)
+map("i", "<A-5>", "<Cmd>BufferGoto 5<CR>", opts)
+map("i", "<A-6>", "<Cmd>BufferGoto 6<CR>", opts)
+map("i", "<A-7>", "<Cmd>BufferGoto 7<CR>", opts)
+map("i", "<A-8>", "<Cmd>BufferGoto 8<CR>", opts)
+map("i", "<A-9>", "<Cmd>BufferGoto 9<CR>", opts)
+map("i", "<A-0>", "<Cmd>BufferLast<CR>", opts)
 
 -- Pin/unpin buffer
 map("n", "<A-p>", "<Cmd>BufferPin<CR>", opts)
