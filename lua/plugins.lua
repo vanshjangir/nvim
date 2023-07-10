@@ -30,8 +30,11 @@ local plugins = {
 	-- nerdtree
 	"preservim/nerdtree",
 
-	--live-server
+	-- live-server
 	"turbio/bracey.vim",
+
+    -- polyglot
+    "sheerun/vim-polyglot",
 
 	-- Statusline
 	{
