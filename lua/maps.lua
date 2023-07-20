@@ -47,6 +47,11 @@ map("i", "<A-j>", "<Down>")
 map("i", "<A-k>", "<Up>")
 map("i", "<A-h>", "<Left>")
 map("i", "<A-l>", "<Right>")
+map("n", "J", "jj10")
+map("n", "K", "kk10")
+map("n", "H", "hh10")
+map("n", "L", "ll10")
+
 
 -- NeoTree
 map("n", "<leader>e", "<CMD>Neotree toggle<CR>")
