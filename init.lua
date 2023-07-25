@@ -2,7 +2,7 @@ require("settings")
 require("maps")
 require("plugins")
 
-vim.cmd("colorscheme nightfox")
+vim.cmd("colorscheme everforest")
 vim.cmd("set clipboard+=unnamedplus")
 vim.cmd("nnoremap <leader>n :NERDTreeFocus<CR>")
 vim.cmd("nnoremap <C-n> :NERDTree<CR>")
