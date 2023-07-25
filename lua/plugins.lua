@@ -23,6 +23,19 @@ local plugins = {
 
 	-- Colorschema
 	"EdenEast/nightfox.nvim",
+	{
+    	'AlexvZyl/nordic.nvim',
+    	lazy = false,
+    	priority = 1000,
+    	config = function()
+        	require 'nordic' .load()
+    	end
+	},
+	"sainnhe/everforest",
+	"frenzyexists/aquarium-vim",
+	"ldelossa/vimdark",
+	"tiagovla/tokyodark.nvim",
+	"xfyuan/nightforest.nvim",
 
 	-- nui
 	"MunifTanjim/nui.nvim",
