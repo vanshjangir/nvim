@@ -68,9 +68,7 @@ map("n", "<leader>tv", "<CMD>ToggleTerm size=70 direction=vertical<CR>")
 --Switching Modes
 map("i", "<A-n>", "<ESC>")
 map("i", "<A-u>", "<ESC><CMD>ToggleTerm size=12 direction=horizontal<CR>")
-map("i", "<A-i>", "<ESC><CMD>ToggleTerm size=12 direction=horizontal<CR>")
 map("t", "<A-n>", "<C-\\><C-n>")
-map("t", "<A-i>", "<C-\\><C-n><CMD>ToggleTerm size=12 direction=horizontal<CR>")
 
 map("i", "<A-o>", "<ESC><CMD>ToggleTerm size=70 direction=vertical<CR>")
 map("t", "<A-o>", "<C-\\><C-n><CMD>ToggleTerm size=70 direction=vertical<CR>")
@@ -80,10 +78,10 @@ map("n", "<leader>m", "<CMD>MarkdownPreview<CR>")
 map("n", "<leader>mn", "<CMD>MarkdownPreviewStop<CR>")
 
 -- Competitive Programming
-map("n", "<A-w>", "<CMD>CompetiTestAdd<CR>")
-map("n", "<A-r>", "<CMD>CompetiTestRun<CR>")
+map("n", "<A-w>", "<CMD>CompetiTest add_testcase<CR>")
+map("n", "<A-r>", "<CMD>CompetiTest run<CR>")
 map("n", "<A-R>", "<CMD>CompetiTestRunNE<CR>")
-map("n", "<A-e>", "<CMD>CompetiTestEdit<CR>")
+map("n", "<A-e>", "<CMD>CompetiTest edit_testcase<CR>")
 
 -- Resize Windows
 map("n", "<C-Left>", "<C-w><")
