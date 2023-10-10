@@ -1,6 +1,7 @@
 # My neovim config
 
-using vimplug and Lazy as package manager
+using Lazy as package manager
+clone this repo in `~/.config/`
 
 ## Requirements
 1. nodejs
