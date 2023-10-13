@@ -43,11 +43,11 @@ local plugins = {
 	-- nerdtree
 	"preservim/nerdtree",
 
-	-- live-server
-	"turbio/bracey.vim",
-
     -- polyglot
     "sheerun/vim-polyglot",
+
+	-- Minimap
+	"wfxr/minimap.vim",
 
 	-- Statusline
 	{
@@ -66,16 +66,6 @@ local plugins = {
 		dependencies = { "nvim-lua/plenary.nvim" },
 	},
 
-	-- LSP
-	{
-		"neovim/nvim-lspconfig",
-		config = function()
-			require("configs.lsp")
-		end,
-	},
-
-	"onsails/lspkind-nvim",
-
 	{
 		"L3MON4D3/LuaSnip",
 		-- follow latest release.
@@ -92,28 +82,24 @@ local plugins = {
 			require("configs.cmp")
 		end,
 	},
-
+	"saadparwaiz1/cmp_luasnip",
+	"rafamadriz/friendly-snippets",
 	"hrsh7th/cmp-nvim-lsp",
 
 	{ "hrsh7th/cmp-path", after = "nvim-cmp" },
-
 	{ "hrsh7th/cmp-buffer", after = "nvim-cmp" },
+	
+	-- LSP
+	{
+		"neovim/nvim-lspconfig",
+		config = function()
+			require("configs.lsp")
+		end,
+	},
 
 	-- Mason: Portable package manager
-	{
-		"williamboman/mason.nvim",
-		config = function()
-			require("mason").setup()
-		end,
-	},
-
-	{
-		"williamboman/mason-lspconfig.nvim",
-		config = function()
-			require("configs.mason-lsp")
-		end,
-		after = "mason.nvim",
-	},
+	"williamboman/mason.nvim",
+	"williamboman/mason-lspconfig.nvim",
 
 	-- File manager
 	{
@@ -195,20 +181,8 @@ local plugins = {
 			vim.g.barbar_auto_setup = false
 		end,
 		opts = {
-			-- lazy.nvim will automatically call setup for you. put your options here, anything missing will use the default:
-			-- animation = true,
-			-- insert_at_start = true,
-			-- …etc.
 		},
 		version = "^1.0.0", -- optional: only update when a new 1.x version is released
-	},
-	{
-		"glepnir/dashboard-nvim",
-		event = "VimEnter",
-		config = function()
-			require("configs.dashboard-nvim")
-		end,
-		dependencies = { { "nvim-tree/nvim-web-devicons" } },
 	},
 }
 

@@ -56,6 +56,8 @@ map("n", "K", "10k")
 map("n", "H", "10h")
 map("n", "L", "10l")
 
+-- Minimap
+map("n", "<A-m>", "<CMD>MinimapToggle<CR>")
 
 -- NeoTree
 map("n", "<leader>e", "<CMD>Neotree toggle<CR>")
