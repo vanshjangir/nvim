@@ -7,7 +7,7 @@ end
 toggleterm.setup({
 	size = 15,
 	open_mapping = [[<F7>]],
---	shading_factor = 1,
+	shading_factor = 1,
 	hide_numbers = true,
 	direction = "horizontal",
 	float_opts = {
