@@ -5,10 +5,11 @@ if not status then
 end
 
 toggleterm.setup({
-	size = 10,
+	size = 15,
 	open_mapping = [[<F7>]],
-	shading_factor = 2,
-	direction = "float",
+--	shading_factor = 1,
+	hide_numbers = true,
+	direction = "horizontal",
 	float_opts = {
 		border = "curved",
 		highlights = {

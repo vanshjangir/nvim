@@ -21,6 +21,9 @@ local plugins = {
 	-- Icons
 	"nvim-tree/nvim-web-devicons",
 
+	-- Transparent
+	"xiyaowong/transparent.nvim",
+
 	-- Colorschema
 	"EdenEast/nightfox.nvim",
 	{
