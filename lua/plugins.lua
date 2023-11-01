@@ -39,6 +39,10 @@ local plugins = {
 	"ldelossa/vimdark",
 	"tiagovla/tokyodark.nvim",
 	"xfyuan/nightforest.nvim",
+	"Alexis12119/nightly.nvim",
+	"oxfist/night-owl.nvim",
+	"numToStr/Sakura.nvim",
+	"luisiacc/the-matrix.nvim",
 
 	-- nui
 	"MunifTanjim/nui.nvim",
