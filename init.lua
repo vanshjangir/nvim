@@ -4,7 +4,7 @@ require("plugins")
 
 vim.cmd("set tabstop=4")
 vim.cmd("set shiftwidth=4")
-vim.cmd("colorscheme everforest")
+vim.cmd("colorscheme onedark")
 vim.cmd("set clipboard+=unnamedplus")
 vim.cmd("nnoremap <leader>n :NERDTreeFocus<CR>")
 vim.cmd("nnoremap <C-n> :NERDTree<CR>")

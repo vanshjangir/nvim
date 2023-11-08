@@ -43,6 +43,8 @@ local plugins = {
 	"oxfist/night-owl.nvim",
 	"numToStr/Sakura.nvim",
 	"luisiacc/the-matrix.nvim",
+	"NLKNguyen/papercolor-theme",
+	"joshdick/onedark.vim",
 
 	-- nui
 	"MunifTanjim/nui.nvim",
