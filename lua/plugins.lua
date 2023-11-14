@@ -49,12 +49,6 @@ local plugins = {
 	-- nui
 	"MunifTanjim/nui.nvim",
 
-	-- nerdtree
-	"preservim/nerdtree",
-
-    -- polyglot
-    "sheerun/vim-polyglot",
-
 	-- Minimap
 	"wfxr/minimap.vim",
 
@@ -97,7 +91,7 @@ local plugins = {
 
 	{ "hrsh7th/cmp-path", after = "nvim-cmp" },
 	{ "hrsh7th/cmp-buffer", after = "nvim-cmp" },
-	
+
 	-- LSP
 	{
 		"neovim/nvim-lspconfig",
