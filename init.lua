@@ -11,6 +11,7 @@ vim.cmd("nnoremap <C-n> :NERDTree<CR>")
 vim.cmd("nnoremap <A-g> <ESC>:NERDTreeToggle<CR>")
 vim.cmd("inoremap <A-g> <ESC>:NERDTreeToggle<CR>")
 vim.cmd("let g:minimap_width = 10")
-vim.cmd[[highlight Normal guibg=#111111 ctermbg=black]]
+vim.cmd[[highlight Normal guibg=#111111]]
 vim.cmd[[autocmd VimEnter * set ls=3]]
 vim.opt.fillchars = {eob = " "}
+dofile('./lua/configs/toggleterm.lua')
