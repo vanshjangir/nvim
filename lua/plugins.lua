@@ -106,13 +106,17 @@ local plugins = {
 
 	-- File manager
 	{
-		"nvim-neo-tree/neo-tree.nvim",
-		branch = "v2.x",
-		dependencies = {
-			"nvim-lua/plenary.nvim",
+        "nvim-tree/nvim-tree.lua",
+        version = "*",
+        lazy = false,
+        dependencies = {
+            "nvim-tree/nvim-web-devicons",
 			"nvim-tree/nvim-web-devicons",
 			"MunifTanjim/nui.nvim",
-		},
+        },
+        config = function()
+            require("nvim-tree").setup {}
+        end, 
 	},
 
 	-- Show colors
@@ -166,7 +170,14 @@ local plugins = {
 		end,
 	},
 
-    {'akinsho/bufferline.nvim', version = "*", dependencies = 'nvim-tree/nvim-web-devicons'},
+    {
+        'akinsho/bufferline.nvim', 
+        version = "*", 
+        dependencies = 'nvim-tree/nvim-web-devicons',
+        config = function ()
+            require("bufferline").setup{};
+        end
+    },
 }
 
 local opts = {}

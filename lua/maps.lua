@@ -60,8 +60,8 @@ map("n", "L", "10l")
 map("n", "<A-m>", "<CMD>MinimapToggle<CR>")
 
 -- NeoTree
-map("n", "<leader>e", "<CMD>Neotree toggle<CR>")
-map("n", "<leader>o", "<CMD>Neotree focus<CR>")
+map("n", "<leader>e", "<CMD>NvimTreeToggle<CR>")
+map("n", "<leader>o", "<CMD>NvimTreeFocus<CR>")
 
 -- Buffer
 map("n", "<TAB>", "<CMD>bnext<CR>")
