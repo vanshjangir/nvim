@@ -5,9 +5,9 @@ if not status then
 end
 
 toggleterm.setup({
-	size = 12,
+	size = 13,
 	open_mapping = [[<F7>]],
-	shading_factor = -50,
+	shading_factor = 1,
 	hide_numbers = true,
 	direction = "horizontal",
 	float_opts = {
