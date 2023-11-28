@@ -58,6 +58,7 @@ map("i", "<A-J>", "<Down><Down><Down><Down><Down>")
 map("i", "<A-K>", "<Up><Up><Up><Up><Up>")
 map("i", "<A-H>", "<Left><Left><Left><Left><Left>")
 map("i", "<A-L>", "<Right><Right><Right><Right><Right>")
+
 map("n", "J", "10j")
 map("n", "K", "10k")
 map("n", "H", "10h")
