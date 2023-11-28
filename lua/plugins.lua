@@ -175,6 +175,7 @@ local plugins = {
             require("bufferline").setup{};
         end
     },
+    "sheerun/vim-polyglot",
 }
 
 local opts = {}
