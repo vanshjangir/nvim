@@ -37,10 +37,17 @@ map("i", "<A-Up>", "<Esc>:m .-2<CR>==gi")
 map("i", "<A-Down>", "<Esc>:m .+1<CR>==gi")
 map("n", "<A-Up>", ":m .-2<CR>==")
 map("n", "<A-Down>", ":m .+1<CR>==")
+
 map("n", "<C-l>", "<C-w>l")
 map("n", "<C-h>", "<C-w>h")
 map("n", "<C-k>", "<C-w>k")
 map("n", "<C-j>", "<C-w>j")
+map("i", "<C-l>", "<C-w>l")
+map("i", "<C-h>", "<C-w>h")
+map("i", "<C-k>", "<C-w>k")
+map("i", "<C-j>", "<C-w>j")
+
+
 
 -- Fast Navigation
 map("i", "<A-j>", "<Down>")
