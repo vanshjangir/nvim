@@ -9,6 +9,7 @@ toggleterm.setup({
 	open_mapping = [[<F7>]],
 	shading_factor = 1,
 	hide_numbers = true,
+	start_in_insert = true,
 	direction = "horizontal",
 	float_opts = {
 		border = "curved",

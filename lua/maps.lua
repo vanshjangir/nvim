@@ -42,10 +42,14 @@ map("n", "<C-l>", "<C-w>l")
 map("n", "<C-h>", "<C-w>h")
 map("n", "<C-k>", "<C-w>k")
 map("n", "<C-j>", "<C-w>j")
-map("i", "<C-l>", "<C-w>l")
-map("i", "<C-h>", "<C-w>h")
-map("i", "<C-k>", "<C-w>k")
-map("i", "<C-j>", "<C-w>j")
+map("i", "<C-l>", "<ESC><C-w>li")
+map("i", "<C-h>", "<ESC><C-w>hi")
+map("i", "<C-k>", "<ESC><C-w>ki")
+map("i", "<C-j>", "<ESC><C-w>ji")
+map("t", "<C-l>", "<C-\\><C-n><C-w>li")
+map("t", "<C-h>", "<C-\\><C-n><C-w>hi")
+map("t", "<C-k>", "<C-\\><C-n><C-w>ki")
+map("t", "<C-j>", "<C-\\><C-n><C-w>ji")
 
 
 
