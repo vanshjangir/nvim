@@ -84,31 +84,3 @@ map("n", "<C-Left>", "<C-w><")
 map("n", "<C-Right>", "<C-w>>")
 map("n", "<C-Up>", "<C-w>+")
 map("n", "<C-Down>", "<C-w>-")
-
--- Bufferline Tabs
-
--- Goto buffer in position...
-map("n", "<A-1>", "<Cmd>BufferLineGoToBuffer 1<CR>")
-map("n", "<A-2>", "<Cmd>BufferLineGoToBuffer 2<CR>")
-map("n", "<A-3>", "<Cmd>BufferLineGoToBuffer 3<CR>")
-map("n", "<A-4>", "<Cmd>BufferLineGoToBuffer 4<CR>")
-map("n", "<A-5>", "<Cmd>BufferLineGoToBuffer 5<CR>")
-map("n", "<A-6>", "<Cmd>BufferLineGoToBuffer 6<CR>")
-map("n", "<A-7>", "<Cmd>BufferLineGoToBuffer 7<CR>")
-map("n", "<A-8>", "<Cmd>BufferLineGoToBuffer 8<CR>")
-map("n", "<A-9>", "<Cmd>BufferLineGoToBuffer 9<CR>")
-map("n", "<A-0>", "<Cmd>BufferLineGoToBuffer -1<CR>")
-
-map("i", "<A-1>", "<Cmd>BufferLineGoToBuffer 1<CR>")
-map("i", "<A-2>", "<Cmd>BufferLineGoToBuffer 2<CR>")
-map("i", "<A-3>", "<Cmd>BufferLineGoToBuffer 3<CR>")
-map("i", "<A-4>", "<Cmd>BufferLineGoToBuffer 4<CR>")
-map("i", "<A-5>", "<Cmd>BufferLineGoToBuffer 5<CR>")
-map("i", "<A-6>", "<Cmd>BufferLineGoToBuffer 6<CR>")
-map("i", "<A-7>", "<Cmd>BufferLineGoToBuffer 7<CR>")
-map("i", "<A-8>", "<Cmd>BufferLineGoToBuffer 8<CR>")
-map("i", "<A-9>", "<Cmd>BufferLineGoToBuffer 9<CR>")
-map("i", "<A-0>", "<Cmd>BufferLineGoToBuffer -1<CR>")
-
--- Close buffer
-map("n", "<A-c>", "<Cmd>bdelete<CR>")

@@ -14,4 +14,5 @@ vim.cmd("let g:minimap_width = 10")
 vim.cmd[[highlight Normal guibg=#16191c]]
 vim.cmd[[autocmd VimEnter * set ls=3]]
 vim.opt.fillchars = {eob = " "}
+vim.opt.showtabline = 0
 dofile('/home/vansh/.config/nvim/lua/configs/toggleterm.lua')
