@@ -168,14 +168,26 @@ local plugins = {
 	},
 
     {
-        'akinsho/bufferline.nvim', 
-        version = "*", 
+        'akinsho/bufferline.nvim',
+        version = "*",
         dependencies = 'nvim-tree/nvim-web-devicons',
         config = function ()
             require("bufferline").setup{};
         end
     },
+
+	-- indentation 
     "sheerun/vim-polyglot",
+
+	-- indent lines
+	{
+		"lukas-reineke/indent-blankline.nvim",
+		main = "ibl",
+		opts = {},
+		config = function()
+			require("ibl").setup()
+		end,
+	},
 }
 
 local opts = {}
