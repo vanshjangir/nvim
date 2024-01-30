@@ -22,32 +22,10 @@ local plugins = {
 	"nvim-tree/nvim-web-devicons",
 
 	-- Colorschema
-	"EdenEast/nightfox.nvim",
-	{
-    	'AlexvZyl/nordic.nvim',
-    	lazy = false,
-    	priority = 1000,
-    	config = function()
-        	require 'nordic' .load()
-    	end
-	},
-	"sainnhe/everforest",
-	"frenzyexists/aquarium-vim",
-	"ldelossa/vimdark",
-	"tiagovla/tokyodark.nvim",
-	"xfyuan/nightforest.nvim",
-	"Alexis12119/nightly.nvim",
-	"oxfist/night-owl.nvim",
-	"numToStr/Sakura.nvim",
-	"luisiacc/the-matrix.nvim",
-	"NLKNguyen/papercolor-theme",
-	"joshdick/onedark.vim",
+	"folke/tokyonight.nvim",
 
 	-- nui
 	"MunifTanjim/nui.nvim",
-
-	-- Minimap
-	"wfxr/minimap.vim",
 
 	-- Statusline
 	{
@@ -66,14 +44,6 @@ local plugins = {
 		dependencies = { "nvim-lua/plenary.nvim" },
 	},
 
-	{
-		"L3MON4D3/LuaSnip",
-		-- follow latest release.
-		version = "1.2.1.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
-		-- install jsregexp (optional!).
-		build = "make install_jsregexp",
-	},
-
 	-- cmp: Autocomplete
 	{
 		"hrsh7th/nvim-cmp",
@@ -82,9 +52,18 @@ local plugins = {
 			require("configs.cmp")
 		end,
 	},
-	"saadparwaiz1/cmp_luasnip",
-	"rafamadriz/friendly-snippets",
 	"hrsh7th/cmp-nvim-lsp",
+
+	-- Snippets
+	{
+		"L3MON4D3/LuaSnip",
+		version = "v2.*",
+        config = function()
+            require("luasnip.loaders.from_vscode").lazy_load()
+        end,
+		dependencies = { "rafamadriz/friendly-snippets" },
+		build = "make install_jsregexp"
+	},
 
 	{ "hrsh7th/cmp-path", after = "nvim-cmp" },
 	{ "hrsh7th/cmp-buffer", after = "nvim-cmp" },
@@ -113,7 +92,7 @@ local plugins = {
         },
         config = function()
             require("nvim-tree").setup {}
-        end, 
+        end,
 	},
 
 	-- Show colors
@@ -179,6 +158,12 @@ local plugins = {
 			require("ibl").setup()
 		end,
 	},
+
+	-- Git wrapper
+	"tpope/vim-fugitive",
+
+	-- undotree
+	"mbbill/undotree",
 }
 
 local opts = {}

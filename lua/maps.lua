@@ -61,12 +61,13 @@ map("n", "L", "10l")
 map("n", "<leader>e", "<CMD>NvimTreeToggle<CR>")
 
 -- Buffer
-map("n", "<TAB>", "<CMD>bnext<CR>")
-map("n", "<S-TAB>", "<CMD>bprevious<CR>")
+map("n", "<leader>", ":b ")
+map("n", "<leader>b", "<CMD>buffers<CR>")
 
 -- Terminal
 map("n", "<leader>th", "<CMD>ToggleTerm size=12 direction=horizontal<CR>")
 map("n", "<leader>tv", "<CMD>ToggleTerm size=70 direction=vertical<CR>")
+map("n", "<leader>tt", "<CMD>ToggleTerm size=70 direction=tab<CR>")
 
 --Switching Modes
 map("i", "<A-n>", "<ESC>")

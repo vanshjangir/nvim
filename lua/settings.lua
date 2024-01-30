@@ -15,7 +15,7 @@ o.relativenumber = true
 o.clipboard = "unnamedplus"
 o.syntax = "on"
 o.autoindent = true
-o.cursorline = true
+o.showtabline = false
 o.expandtab = true
 o.shiftwidth = 4
 o.tabstop = 4
@@ -30,4 +30,4 @@ o.showcmd = true
 o.showmatch = true
 o.inccommand = "split"
 o.termguicolors = true
-
+o.scrolloff = 10

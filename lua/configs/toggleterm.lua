@@ -6,7 +6,7 @@ end
 
 toggleterm.setup({
 	size = 13,
-	open_mapping = [[<F7>]],
+	open_mapping = [[<A-c>]],
 	shading_factor = 1,
 	hide_numbers = true,
 	start_in_insert = true,
