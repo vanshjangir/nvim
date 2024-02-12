@@ -12,75 +12,43 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
-	-- Packer
-	"wbthomason/packer.nvim",
-
-	-- Common utilities
-	"nvim-lua/plenary.nvim",
-
-	-- Icons
-	"nvim-tree/nvim-web-devicons",
-
-	-- Colorschema
 	"folke/tokyonight.nvim",
-
-	-- nui
-	"MunifTanjim/nui.nvim",
-
-	-- Statusline
 	{
 		"nvim-lualine/lualine.nvim",
 		event = "BufEnter",
 		config = function()
-			require("configs.lualine")
+			require("lualine").setup{
+				options = {
+					component_separators = { left = "", right = "" },
+					section_separators = { left = "", right = "" },
+				},
+				sections = {
+					lualine_c = {{ "filename", file_status = true, path = 1 }},
+				}
+			}
 		end,
 		dependencies = { "nvim-web-devicons" },
 	},
-
-	-- Telescope
 	{
 		"nvim-telescope/telescope.nvim",
 		tag = "0.1.2",
 		dependencies = { "nvim-lua/plenary.nvim" },
 	},
-
-	-- cmp: Autocomplete
 	{
-		"hrsh7th/nvim-cmp",
-		event = "InsertEnter",
+		"VonHeikemen/lsp-zero.nvim",
 		config = function()
-			require("configs.cmp")
+			require("configs.lspzero")
 		end,
+		branch = 'v3.x'
 	},
-	"hrsh7th/cmp-nvim-lsp",
-
-	-- Snippets
-	{
-		"L3MON4D3/LuaSnip",
-		version = "v2.*",
-        config = function()
-            require("luasnip.loaders.from_vscode").lazy_load()
-        end,
-		dependencies = { "rafamadriz/friendly-snippets" },
-		build = "make install_jsregexp"
-	},
-
-	{ "hrsh7th/cmp-path", after = "nvim-cmp" },
-	{ "hrsh7th/cmp-buffer", after = "nvim-cmp" },
-
-	-- LSP
-	{
-		"neovim/nvim-lspconfig",
-		config = function()
-			require("configs.lsp")
-		end,
-	},
-
-	-- Mason: Portable package manager
-	"williamboman/mason.nvim",
-	"williamboman/mason-lspconfig.nvim",
-
-	-- File manager
+	{"hrsh7th/nvim-cmp"},
+	{"hrsh7th/cmp-nvim-lsp"},
+	{"L3MON4D3/LuaSnip"},
+	{"hrsh7th/cmp-path", after = "nvim-cmp" },
+	{"hrsh7th/cmp-buffer", after = "nvim-cmp" },
+	{"neovim/nvim-lspconfig"},
+	{"williamboman/mason.nvim"},
+	{"williamboman/mason-lspconfig.nvim"},
 	{
         "nvim-tree/nvim-tree.lua",
         version = "*",
@@ -94,41 +62,28 @@ local plugins = {
             require("nvim-tree").setup {}
         end,
 	},
-
-	-- Show colors
-	{
-		"norcalli/nvim-colorizer.lua",
-		config = function()
-			require("colorizer").setup({ "*" })
-		end,
-	},
-
-	-- Terminal
+	{"norcalli/nvim-colorizer.lua"},
 	{
 		"akinsho/toggleterm.nvim",
 		config = function()
-			require("configs.toggleterm")
+			require("toggleterm").setup{
+				open_mapping = [[<A-c>]],
+				shading_factor = 1,
+			}
 		end,
 	},
-
-	-- Git
 	{
 		"lewis6991/gitsigns.nvim",
 		config = function()
-			require("configs.gitsigns")
+			require("gitsigns").setup()
 		end,
 	},
-
-
-	-- autopairs
 	{
 		"windwp/nvim-autopairs",
 		config = function()
-			require("configs.autopairs")
+			require("nvim-autopairs").setup()
 		end,
 	},
-
-	-- testcases
 	{
 		"xeluxee/competitest.nvim",
 		requires = "MunifTanjim/nui.nvim",
@@ -136,34 +91,29 @@ local plugins = {
 			require("competitest").setup()
 		end,
 	},
-
-	-- treesitter
 	{
 		"nvim-treesitter/nvim-treesitter",
 		run = function()
 			local ts_update = require("nvim-treesitter.install").update({ with_sync = true })
 			ts_update()
 		end,
+
+		config = function()
+			require("configs.treesitter")
+		end,
 	},
-
-	-- indentation 
-    "sheerun/vim-polyglot",
-
-	-- indent lines
 	{
 		"lukas-reineke/indent-blankline.nvim",
 		main = "ibl",
 		opts = {},
 		config = function()
-			require("ibl").setup()
+			require("ibl").setup{
+				scope = { enabled = false },
+			}
 		end,
 	},
-
-	-- Git wrapper
-	"tpope/vim-fugitive",
-
-	-- undotree
-	"mbbill/undotree",
+	{"tpope/vim-fugitive"},
+	{"mbbill/undotree"},
 }
 
 local opts = {}
