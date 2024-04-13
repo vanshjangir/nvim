@@ -12,7 +12,17 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
-	"folke/tokyonight.nvim",
+    {"hrsh7th/nvim-cmp"},
+    {"L3MON4D3/LuaSnip"},
+    {"hrsh7th/cmp-nvim-lsp"},
+    {"folke/tokyonight.nvim"},
+    {"neovim/nvim-lspconfig"},
+    {"williamboman/mason.nvim"},
+    {"williamboman/mason-lspconfig.nvim"},
+	{"hrsh7th/cmp-path", after = "nvim-cmp" },
+	{"hrsh7th/cmp-buffer", after = "nvim-cmp" },
+    {"xiyaowong/transparent.nvim"},
+
 	{
 		"nvim-lualine/lualine.nvim",
 		event = "BufEnter",
@@ -41,14 +51,6 @@ local plugins = {
 		end,
 		branch = 'v3.x'
 	},
-	{"hrsh7th/nvim-cmp"},
-	{"hrsh7th/cmp-nvim-lsp"},
-	{"L3MON4D3/LuaSnip"},
-	{"hrsh7th/cmp-path", after = "nvim-cmp" },
-	{"hrsh7th/cmp-buffer", after = "nvim-cmp" },
-	{"neovim/nvim-lspconfig"},
-	{"williamboman/mason.nvim"},
-	{"williamboman/mason-lspconfig.nvim"},
 	{
         "nvim-tree/nvim-tree.lua",
         version = "*",
@@ -59,23 +61,24 @@ local plugins = {
 			"MunifTanjim/nui.nvim",
         },
         config = function()
-            require("nvim-tree").setup {}
+            require("nvim-tree").setup {
+                sync_root_with_cwd = true;
+            }
         end,
 	},
-	{"norcalli/nvim-colorizer.lua"},
 	{
+		"lewis6991/gitsigns.nvim",
+		config = function()
+			require("gitsigns").setup()
+		end,
+	},
+    {
 		"akinsho/toggleterm.nvim",
 		config = function()
 			require("toggleterm").setup{
 				open_mapping = [[<A-c>]],
 				shading_factor = 1,
 			}
-		end,
-	},
-	{
-		"lewis6991/gitsigns.nvim",
-		config = function()
-			require("gitsigns").setup()
 		end,
 	},
 	{
@@ -102,18 +105,6 @@ local plugins = {
 			require("configs.treesitter")
 		end,
 	},
-	{
-		"lukas-reineke/indent-blankline.nvim",
-		main = "ibl",
-		opts = {},
-		config = function()
-			require("ibl").setup{
-				scope = { enabled = false },
-			}
-		end,
-	},
-	{"tpope/vim-fugitive"},
-	{"mbbill/undotree"},
 }
 
 local opts = {}
