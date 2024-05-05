@@ -77,7 +77,7 @@ local plugins = {
 		config = function()
 			require("toggleterm").setup{
 				open_mapping = [[<A-c>]],
-				shading_factor = 1,
+				shading_factor = -100,
 			}
 		end,
 	},
