@@ -31,3 +31,4 @@ o.showmatch = true
 o.inccommand = "split"
 o.termguicolors = true
 o.scrolloff = 10
+o.guicursor = "i:hor1"

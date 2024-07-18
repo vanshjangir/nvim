@@ -1,5 +1,5 @@
 local function map(mode, lhs, rhs)
-	vim.keymap.set(mode, lhs, rhs, { silent = true })
+    vim.keymap.set(mode, lhs, rhs, { silent = true })
 end
 
 -- <leader> = the space key
@@ -45,10 +45,10 @@ map("n", "<C-l>", "<C-w>l")
 map("n", "<C-h>", "<C-w>h")
 map("n", "<C-k>", "<C-w>k")
 map("n", "<C-j>", "<C-w>j")
-map("i", "<C-l>", "<ESC><C-w>li")
-map("i", "<C-h>", "<ESC><C-w>hi")
-map("i", "<C-k>", "<ESC><C-w>ki")
-map("i", "<C-j>", "<ESC><C-w>ji")
+map("i", "<C-l>", "<ESC><C-w>l")
+map("i", "<C-h>", "<ESC><C-w>h")
+map("i", "<C-k>", "<ESC><C-w>k")
+map("i", "<C-j>", "<ESC><C-w>j")
 
 
 -- Terminal
@@ -56,10 +56,10 @@ map("n", "<leader>th", "<CMD>ToggleTerm size=13 direction=horizontal<CR>")
 map("n", "<leader>tv", "<CMD>ToggleTerm size=70 direction=vertical<CR>")
 map("n", "<leader>tf", "<CMD>ToggleTerm direction=float<CR>")
 map("n", "<leader>tt", "<CMD>ToggleTerm direction=tab<CR>")
-map("t", "<C-l>", "<C-\\><C-n><C-w>li")
-map("t", "<C-h>", "<C-\\><C-n><C-w>hi")
-map("t", "<C-j>", "<C-\\><C-n><C-w>ji")
-map("t", "<C-k>", "<C-\\><C-n><C-w>ki")
+map("t", "<C-l>", "<C-\\><C-n><C-w>l")
+map("t", "<C-h>", "<C-\\><C-n><C-w>h")
+map("t", "<C-j>", "<C-\\><C-n><C-w>j")
+map("t", "<C-k>", "<C-\\><C-n><C-w>k")
 
 --Switching Modes
 map("i", "<A-n>", "<ESC>")
