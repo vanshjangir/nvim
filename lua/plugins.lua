@@ -12,17 +12,36 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
-    {"hrsh7th/nvim-cmp"},
-    {"L3MON4D3/LuaSnip"},
-    {"hrsh7th/cmp-nvim-lsp"},
-    {"folke/tokyonight.nvim"},
-    {"neovim/nvim-lspconfig"},
-    {"williamboman/mason.nvim"},
-    {"williamboman/mason-lspconfig.nvim"},
-    {"hrsh7th/cmp-path", after = "nvim-cmp" },
-    {"hrsh7th/cmp-buffer", after = "nvim-cmp" },
-    {"xiyaowong/transparent.nvim"},
-
+    {
+        "hrsh7th/nvim-cmp"
+    },
+    {
+        "L3MON4D3/LuaSnip"
+    },
+    {
+        "hrsh7th/cmp-nvim-lsp"
+    },
+    {
+        "neovim/nvim-lspconfig"
+    },
+    {
+        "williamboman/mason.nvim"
+    },
+    {
+        "williamboman/mason-lspconfig.nvim"
+    },
+    {
+        "hrsh7th/cmp-path", after = "nvim-cmp"
+    },
+    {
+        "hrsh7th/cmp-buffer", after = "nvim-cmp"
+    },
+    {
+        "EdenEast/nightfox.nvim",
+        config = function ()
+            vim.cmd[[autocmd VimEnter * highlight! link NormalFloat Normal]]
+        end
+    },
     {
         "nvim-lualine/lualine.nvim",
         event = "BufEnter",
@@ -30,7 +49,7 @@ local plugins = {
             require("lualine").setup{
                 options = {
                     component_separators = { left = "", right = "" },
-                    section_separators = { left = "", right = "" },
+                    section_separators = { left = "", right = "" },
                 },
                 sections = {
                     lualine_c = {{ "filename", file_status = true, path = 1 }},
@@ -43,6 +62,9 @@ local plugins = {
         "nvim-telescope/telescope.nvim",
         tag = "0.1.2",
         dependencies = { "nvim-lua/plenary.nvim" },
+        config = function ()
+            vim.cmd([[autocmd User TelescopePreviewerLoaded setlocal number]])
+        end,
     },
     {
         "VonHeikemen/lsp-zero.nvim",
@@ -77,22 +99,12 @@ local plugins = {
         config = function()
             require("toggleterm").setup{
                 open_mapping = [[<A-c>]],
-                shading_factor = -100,
             }
         end,
     },
     {
         "windwp/nvim-autopairs",
-        config = function()
-            require("nvim-autopairs").setup()
-        end,
-    },
-    {
-        "xeluxee/competitest.nvim",
-        requires = "MunifTanjim/nui.nvim",
-        config = function()
-            require("competitest").setup()
-        end,
+        config = true,
     },
     {
         "nvim-treesitter/nvim-treesitter",
